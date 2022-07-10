@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Beer App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head> 
+  <!-- 부트스트렙 사이트에서 템플릿을 만들려면 위 링크를 헤더에 넣어줘야함  -->
+
+  <section class="hero is-warning is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          최저가 항공권 검색
+        </h1>
+        <h2 class="subtitle">
+          오늘의 가장 싼 티켓
+        </h2>
+      </div>
+      <br>
+      <div class="container">
+        <button class="button is-large" onClick="window.location.reload();">Go!</button>
+        <!-- location.reload() : 새로고침 버튼처럼 현재 리소스를 다시 불러오는 것 (현재 페이지 새로고침) -->
+      </div>
+    </div>
+  </section>
+
+  <body>
+  <section class="section">
+    <div class="container">
+        <div class="content is-medium">
+            <!--{{ ___________ }} 구문은 템플릿 변수용임, 이것은 내장 옵션 중 하나로 선언된 변수 
+                또는 여러 메서드(모델, 보기 컨텍스트 등)에서 만든 고유한 변수를 
+                보간하는 데 사용 -->
+            <h1>{{ beer.name }}</h1>
+            <h4>{{ beer.abv }} %</h4>
+            <p>{{ beer.desc }}</p>
+            <h5>Dinner suggestion:</h5>
+            <p>{{ beer.foodpair }}</p>
+        </div>
+    </div>
+  </section>
+  </body>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>항공권 검색</strong> by <a href="https://m-flight.naver.com/">네이버항공권사이트이동</a>.
+      </p>
+    </div>
+  </footer>
+
+</html>
